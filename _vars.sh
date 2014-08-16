@@ -12,17 +12,17 @@ source $CURRENT_DIR/_helpers.sh
 #######################################
 
 # MAIN VARS
-RUBY_VERSION='ruby-2.1.1-p76'
-GEMSET_NAME='RAILS_PROJECT_GEMSET_NAME'
+RUBY_VERSION='ruby-2.1.1'
+GEMSET_NAME='default'
 ENV_NAME='development'
 
 # APP VARS
 
 # For Unix
-RAILS_ROOT=`readlink -f ../../`
+# RAILS_ROOT=`readlink -f ../`
 
 # For Mac
-# RAILS_ROOT="$(cd ../../ && pwd -P)"
+RAILS_ROOT="$(cd ./ && pwd -P)"
 
 APP_ENV="RAILS_ENV=$ENV_NAME"
 
