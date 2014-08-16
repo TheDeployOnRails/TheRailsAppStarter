@@ -1,7 +1,7 @@
 TheAppStartScripts
 ==================
 
-Bash scripts for starting dev env of Rails App.
+Bash scripts for starting Rails Services & App
 
 For example it can start `whenever`, `sphinx`, `delayed_job`, `sidekiq`, `unicorn`, etc.
 
