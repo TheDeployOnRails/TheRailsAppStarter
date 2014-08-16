@@ -17,7 +17,13 @@ GEMSET_NAME='RAILS_PROJECT_GEMSET_NAME'
 ENV_NAME='development'
 
 # APP VARS
+
+# For Unix
 RAILS_ROOT=`readlink -f ../../`
+
+# For Mac
+# RAILS_ROOT="$(cd ../../ && pwd -P)"
+
 APP_ENV="RAILS_ENV=$ENV_NAME"
 
 # RVM VARS
