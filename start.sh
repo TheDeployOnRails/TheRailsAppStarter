@@ -11,7 +11,7 @@ source $CURRENT_DIR/_vars.sh
 # WHENEVER / CRON
 #######################################
 service_notification "Whenever" "try to update CRON"
-(execute "$RVM_DO whenever --update-crontab rails_project_name --set environment=development") || (error_message "Whenever can't update CRON")
+(execute "$RVM_DO whenever --update-crontab deploy_dummy_app --set environment=development") || (error_message "Whenever can't update CRON")
 
 #######################################
 # SPHINX
@@ -38,3 +38,9 @@ service_notification "Redis" "try to start"
 #######################################
 service_notification "Delayed Job" "try to start"
 (execute "$RVM_DO bin/delayed_job start -n 5") || (error_message "DelayedJob can't be started")
+
+#######################################
+# UNICORN
+#######################################
+service_notification "Unicorn" "try to start"
+execute "$BUNDLE_EXEC bin/unicorn -D -c $RAILS_ROOT/config/unicorn.rb -E development"
