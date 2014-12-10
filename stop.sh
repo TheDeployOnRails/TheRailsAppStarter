@@ -29,7 +29,7 @@ service_notification "Redis" "try to stop"
 # SIDEKIQ
 #######################################
 service_notification "Sidekiq" "try to stop"
-(execute "$BUNDLE_EXEC bin/sidekiqctl stop $RAILS/tmp/pids/sidekiq.pid") || (error_message "SidqKiq can't be stoppped")
+(execute "$BUNDLE_EXEC bin/sidekiqctl stop $RAILS_ROOT/tmp/pids/sidekiq.pid") || (error_message "SidqKiq can't be stoppped")
 
 #######################################
 # DELAYED JOB
